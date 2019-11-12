@@ -1,0 +1,10 @@
+.c-logo {
+
+    &__title {
+        color: $txtColor;
+        font-family: $Montserrat;
+        font-size: rem(24px);
+        font-weight: 700;
+        line-height: 32px;
+    }
+}

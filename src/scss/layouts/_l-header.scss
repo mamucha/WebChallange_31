@@ -1,0 +1,15 @@
+.l-header {
+    position: fixed;
+    top: 0;
+    @include size(100%, 70px);
+    background-color: transparent;
+    z-index: 99;
+
+    &__wrapper {
+        max-width: 1170px;
+        height: 100%;
+        margin: 0 auto;
+        @include flex(flex, center, space-between);
+
+    }
+}

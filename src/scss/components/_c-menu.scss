@@ -1,0 +1,58 @@
+.c-menu {
+    min-width: 470px;
+
+    &__list {
+        @include flex(flex, center, space-around);
+        color: $txtColor;
+        font-family: Cormorant;
+        font-size: rem(16px);
+        font-weight: 400;
+        line-height: 32px;
+        text-transform: uppercase;
+
+    }
+
+    &__item {
+        position: relative;
+
+        &:nth-child(1)::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: $txtColor;
+            transform-origin: bottom left;
+            transform: scaleX(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:nth-child(1):hover::before {
+            transform: scaleX(0);
+            transform-origin: bottom right;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: $txtColor;
+            transform-origin: bottom right;
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+
+        &:hover::before {
+            transform-origin: bottom left;
+            transform: scaleX(1);
+        }
+    }
+
+    &__link {
+        display: inline-block;
+    }
+}
