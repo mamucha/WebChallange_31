@@ -1,0 +1,49 @@
+.c-intro {
+    @include flex(flex, center, space-between);
+
+    &__img {
+        background-color: #e1e1e1;
+        width: 650px;
+        height: 800px;
+
+        &>img {
+            position: relative;
+            bottom: -60px;
+            left: 80px;
+        }
+    }
+
+    &__txt {
+        // width: 100%;
+
+    }
+
+    &__title {
+        color: #212121;
+        font-family: $Cormorant;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 32px;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        opacity: 0.9;
+        color: #212121;
+        font-family: $Cormorant;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 32px;
+        padding: 15px 0 25px;
+    }
+
+    &__btn {
+        margin-right: 20px;
+
+        &--white {
+            color: #212121;
+
+        }
+    }
+
+}
