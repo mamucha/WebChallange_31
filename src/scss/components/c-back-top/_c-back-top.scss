@@ -1,0 +1,17 @@
+.c-back-top {
+    @include size(42px);
+    @include position($position:fixed, $bottom:40px, $right:40px);
+    @include flex_center();
+    border-radius: 50%;
+    border: 1ps solid black;
+    background-color: #c9c5c5;
+    opacity: 0;
+    transition: .3s all ease-in-out;
+
+    &--show {
+        opacity: 1;
+    }
+
+
+
+}
