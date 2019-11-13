@@ -1,0 +1,26 @@
+.c-skill {
+    width: 100%;
+    @include flex_center();
+    flex-wrap: wrap;
+
+    &__txt {
+        color: #000000;
+        font-size: rem(24px);
+        font-weight: 400;
+        line-height: 32px;
+        text-transform: uppercase;
+    }
+
+    &__box {
+        @include size(350px, 50px);
+        margin: 20px 15px;
+        @include flex(flex, flex-start, space-between, column);
+
+
+    }
+
+    &__bar {
+        @include size(100%, 15px);
+        background-color: #dfdfdf;
+    }
+}
