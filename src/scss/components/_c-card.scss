@@ -1,0 +1,18 @@
+.c-card {
+
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2 370px);
+
+    &__box {
+
+        &>img {
+            @include size(100%, auto);
+            object-fit: cover;
+        }
+    }
+
+    margin-bottom: 40px;
+
+}
