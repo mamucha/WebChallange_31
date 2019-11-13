@@ -1,0 +1,55 @@
+.c-feature {
+
+    @include size(1170px, 520px);
+    position: relative;
+    top: 220px;
+    box-shadow: 0 0 40px 9px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    @include flex(flex, center, center, column);
+
+    &__boxes {
+        @include flex(flex, center, space-around);
+        width: 100%;
+    }
+
+
+    &__box {
+        @include size(290px, 100%);
+        min-height: 195px;
+        @include flex(flex, center, flex-start, column);
+    }
+
+    &__icon {
+
+        @include size(45px);
+
+
+
+        &>img {
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        @include size(100%);
+
+        &--title {
+            padding: 18px 0;
+            color: #000000;
+            font-size: rem(24px);
+            font-weight: 700;
+            line-height: 32px;
+
+        }
+
+        &--subtitle {
+            color: #000000;
+            opacity: 0.9;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+
+        }
+    }
+}

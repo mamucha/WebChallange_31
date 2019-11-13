@@ -4,4 +4,14 @@
         height: 800px;
         overflow: hidden;
     }
+
+    &--doing {
+        background: url('../img/service/pic_1.png') center center/cover no-repeat fixed;
+        height: 400px;
+
+    }
+
+    &--works {
+        margin-top: 460px;
+    }
 }
