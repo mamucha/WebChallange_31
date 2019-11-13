@@ -1,0 +1,36 @@
+.c-header {
+
+    // @include flex(flex, center, center, column);
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+
+        font-size: rem(36px);
+        color: #000000;
+        font-weight: 400;
+        line-height: 32px;
+        margin-bottom: 60px;
+        position: relative;
+
+        &::after {
+            @include position($bottom:-15px, $left:50%);
+            @include size(60px, 6px);
+            transform: translateX(-50%);
+            background: url('../img/header/dash.svg');
+
+        }
+    }
+
+    &__subtitle {
+        color: $txtColor;
+        font-size: rem(16px);
+        font-weight: 400;
+        line-height: 26px;
+        margin-bottom: 28px;
+
+    }
+
+}

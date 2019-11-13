@@ -1,6 +1,6 @@
 .c-intro {
     @include flex(flex, center, flex-end);
-    height: 800px;
+    @include size(100%, 800px);
 
     &__img {
         background-color: #e1e1e1;
