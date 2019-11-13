@@ -14,4 +14,12 @@
         height: 100%;
     }
 
+    &--footer {
+        @include flex(flex, center, flex-start);
+        padding: 45px;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+    }
+
 }
