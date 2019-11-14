@@ -1,16 +1,3 @@
-$(document).scroll(function () {
-    const sectionSkill = $('.l-section--skills');
-    const scrollValue = $(this).scrollTop();
-    const windowHeight = $(window).height();
-
-
-    if (scrollValue > sectionSkill.offset().top - windowHeight / 2) {
-
-        skill();
-    }
-
-})
-
 function skill() {
 
     $(document).ready(function () {
@@ -20,13 +7,14 @@ function skill() {
             }, 6000);
         });
 
-
     });
 
 
-    $('.Count').each(() => {
+    $('.Count').each(function () {
 
         var $this = $(this);
+        console.log($this);
+
         $({
             Counter: 0
         }).animate({
@@ -39,4 +27,18 @@ function skill() {
             }
         });
     });
+
 }
+
+
+
+function progressbaring() {
+    const sectionSkill = $('.l-section--skills');
+    const windowHeight = $(window).height();
+    if (window.pageYOffset > sectionSkill.offset().top - windowHeight - 100) {
+        skill();
+        window.removeEventListener('scroll', progressbaring);
+    }
+}
+
+window.addEventListener('scroll', progressbaring);
