@@ -1,6 +1,6 @@
 .c-skill {
     width: 100%;
-    @include flex_center();
+    @include flex(flex, center, space-around);
     flex-wrap: wrap;
 
     &__txt {
