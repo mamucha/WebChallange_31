@@ -1,8 +1,17 @@
 .c-feature {
 
-    @include size(1170px, 520px);
+    //mobile
+    max-width: 1170px;
+    width: 100%;
+    padding: 20px 0;
+    height: auto;
+
+
+
     position: relative;
-    top: 220px;
+
+    //mobile
+    top: 60px;
     box-shadow: 0 0 40px 9px rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     @include flex(flex, center, center, column);
@@ -10,13 +19,18 @@
     &__boxes {
         @include flex(flex, center, space-around);
         width: 100%;
+        //mobile
+        flex-direction: column;
     }
 
 
     &__box {
-        @include size(290px, 100%);
-        min-height: 195px;
+
         @include flex(flex, center, flex-start, column);
+        //mobile
+        margin-bottom: 25px;
+        max-width: 290px;
+        width: 90%;
     }
 
     &__icon {
@@ -50,6 +64,50 @@
             font-weight: 400;
             line-height: 26px;
 
+        }
+    }
+}
+
+
+//media queries
+//screen > 850px
+
+@mixin c-feature\@screen_large {
+
+
+    .c-feature {
+
+        &__boxes {
+
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        &__box {
+            // @include size(290px, 100%);
+            min-height: 195px;
+            height: 100%;
+            margin-bottom: 0;
+            padding: 0 5px;
+
+
+
+        }
+
+    }
+
+}
+
+
+
+//screen > 1280px
+@mixin c-feature\@screen_mega {
+    .c-feature {
+        @include size(1170px, 520px);
+        top: 220px;
+
+        &__box {
+            padding: 0;
         }
     }
 }

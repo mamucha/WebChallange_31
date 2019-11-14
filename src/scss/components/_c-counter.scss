@@ -2,6 +2,8 @@
 
     @include flex(flex, center, space-around);
     width: 100%;
+    //mobile
+    flex-direction: column;
 
     &__box {
 
@@ -9,6 +11,11 @@
         min-height: 135px;
         @include flex(flex, center, flex-start, column);
         color: #ffffff;
+
+        //mobile
+        &:nth-last-child(1) {
+            margin-bottom: 25px;
+        }
     }
 
     &__number {
@@ -22,6 +29,26 @@
         text-align: center;
         font-size: rem(30px);
         font-weight: 400;
+
+    }
+}
+
+
+//media queries
+// screen > 850px
+
+@mixin c-counter\@screen_large {
+    .c-counter {
+        flex-direction: row;
+        padding: 20px 0;
+
+        &__box {
+
+            //mobile
+            &:nth-last-child(1) {
+                margin-bottom: 0px;
+            }
+        }
 
     }
 }

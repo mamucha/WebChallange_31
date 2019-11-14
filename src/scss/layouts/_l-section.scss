@@ -7,16 +7,20 @@
 
     &--doing {
         background: url('../img/service/pic_1.png') center center/cover no-repeat fixed;
-        height: 400px;
+        // height: 400px;
+        //mobile
 
     }
 
     &--works {
-        margin-top: 460px;
+        // margin-top: 460px;
+        //mobile
+        margin-top: 150px;
     }
 
     &--counter {
-        height: 400px;
+        // height: 400px;
+        //mobile
         background: url('../img/counter/pic_1.png') center center/cover no-repeat fixed;
     }
 
@@ -25,4 +29,21 @@
         margin: 90px auto 0;
 
     }
+}
+
+
+//media queries
+//screen > 1280px
+
+@mixin l-section\@screen_mega {
+
+    .l-section {
+
+
+        &--works {
+            margin-top: 420px;
+        }
+
+    }
+
 }

@@ -1,0 +1,20 @@
+.c-copyright {
+    @include position($top:50%, $left:50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    transform: translate(-50%, 130%);
+    width: 100%;
+    text-align: center;
+
+}
+
+
+
+//media queries
+//screen > 1024px
+
+@mixin c-copyright\@screen_wide {
+    .c-copyright {
+        transform: translate(-50%, -50%);
+    }
+}

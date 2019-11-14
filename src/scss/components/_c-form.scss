@@ -5,19 +5,20 @@
 
 
     &--inline {
-        @include flex_center();
+        @include flex(flex, center, center, column);
+        width: 100%;
+
     }
 
     &__input {
-        width: 570px;
+
+        width: 100%;
         border: 0;
         border-bottom: 1px solid #000;
         line-height: 32px;
         padding-left: 10px;
 
-        &:nth-of-type(1) {
-            margin-right: 25px;
-        }
+
 
         &::placeholder {
             color: #000000;
@@ -32,12 +33,51 @@
         border-bottom: 1px solid #000;
         margin-bottom: 40px;
         line-height: 32px;
-        padding: 50px 0 0 10px;
+        padding: 30px 0 0 10px;
 
         &::placeholder {
             color: #000000;
             opacity: 1;
         }
 
+    }
+}
+
+
+
+// media queries
+// screen > 768px
+
+@mixin c-form\@screen_medium {
+
+    .c-form {
+
+        &--inline {
+
+            flex-direction: row;
+        }
+
+        &__input {
+
+            &:nth-of-type(1) {
+                margin-right: 25px;
+
+            }
+        }
+    }
+}
+
+
+//screenn > 1280px
+@mixin c-form\@screen_mega {
+    .c-form {
+
+        &__input {
+            width: 570px
+        }
+
+        &__text {
+            padding: 50px 0 0 10px;
+        }
     }
 }

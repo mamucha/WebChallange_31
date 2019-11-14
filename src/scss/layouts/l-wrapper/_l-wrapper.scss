@@ -1,11 +1,15 @@
 .l-wrapper {
     max-width: 1170px;
-    margin: 120px auto;
-    // text-align: center;
+
+    //mobile
+    margin: 80px auto;
+
     @include flex(flex, center, center, column);
     opacity: 0;
     transform: translateY(40px);
     transition: .3s all ease-in-out;
+    //mobile
+    width: 80%;
 
     &--showing {
         transform: none;
@@ -15,6 +19,8 @@
     &--intro {
         max-width: 100vw;
         margin: 0;
+        //mobile
+        width: 100%;
     }
 
     &--counter {
@@ -23,10 +29,56 @@
 
     &--footer {
         @include flex(flex, center, flex-start);
-        padding: 45px;
+        // padding: 45px;
+        //mobile
+        padding: 50px;
+        flex-direction: column;
         margin: 0 auto;
         height: 100%;
         position: relative;
+    }
+}
+
+
+//media queries
+//screen > 850px
+
+@mixin l-wrapper\@screen_large {
+
+    .l-wrapper {
+        width: 90%;
+
+        &--intro {
+            width: 100%;
+        }
+    }
+}
+
+
+// screen > 1024px
+@mixin l-wrapper\@screen_wide {
+    .l-wrapper {
+        margin: 120px auto;
+
+        &--intro {
+
+            margin: 0;
+        }
+
+        &--footer {
+            align-items: flex-start;
+            justify-content: center;
+            padding: 45px;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+//screen > 1280px
+@mixin l-wrapper\@screen_mega {
+    .l-wrapper {
+        width: 100%;
     }
 
 }

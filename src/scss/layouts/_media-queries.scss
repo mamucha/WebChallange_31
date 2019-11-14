@@ -3,19 +3,40 @@
 
 // Small screen > 640px
 @media only screen and (min-width: 640px) {
+    // @include c-intro\@screen_small;
 }
 
 // Medium screen > 768px
 @media only screen and (min-width: 768px) {
+    @include c-intro\@screen_medium;
+    @include c-form\@screen_medium;
 
+}
+
+// Large screen (@screen-size_large)
+@media only screen and (min-width: 850px) {
+    @include l-wrapper\@screen_large;
+    @include c-feature\@screen_large;
+    @include c-card\@screen_large;
+    @include c-counter\@screen_large;
 }
 
 
 // Wide screen > 1024px
 @media only screen and (min-width: 1024px) {
+    @include c-intro\@screen_wide;
+    @include c-copyright\@screen_wide;
+    @include l-wrapper\@screen_wide;
+
 }
 
 
 // Mega screen > 1280px
 @media only screen and (min-width: 1280px) {
+    @include c-card\@screen_mega;
+    @include c-feature\@screen_mega;
+    @include c-form\@screen_mega;
+    @include c-intro\@screen_mega;
+    @include l-wrapper\@screen_mega;
+    @include l-section\@screen_mega;
 }
