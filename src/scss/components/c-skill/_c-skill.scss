@@ -1,0 +1,77 @@
+.c-skill {
+    width: 100%;
+    @include flex_center();
+    flex-wrap: wrap;
+
+    &__txt {
+        color: #000000;
+        font-size: rem(24px);
+        font-weight: 400;
+        line-height: 32px;
+        text-transform: uppercase;
+    }
+
+    &__box {
+        @include size(350px, 50px);
+        margin: 20px 15px;
+        @include flex(flex, flex-start, space-between, column);
+
+
+    }
+
+    &__bar {
+        @include size(100%, 15px);
+        background-color: #dfdfdf;
+        display: block;
+        position: relative;
+        border-radius: 3px;
+        transition: 0.4s linear;
+        transition-property: width, background-color;
+
+        &--bar {
+            @include size(0px, 15px);
+            background: #6adcfa;
+            border-radius: 3px;
+
+
+        }
+
+        &--precent {
+            position: absolute;
+            right: 10px;
+            top: -35px;
+            font-size: rem(24px);
+
+
+            color: black;
+            color: rgba(0, 0, 0, 0.4);
+
+            &::after {
+                content: '%';
+            }
+        }
+
+    }
+}
+
+@keyframes skill {
+    0% {
+        transform: translateX(-20px);
+        background-color: #000000;
+    }
+
+    25% {
+        transform: translateX(-70px);
+        background-color: #000000;
+    }
+
+    50% {
+        transform: translateX(-180px);
+        background-color: #000000;
+    }
+
+    100% {
+        transform: translateX(-240px);
+        background-color: #000000;
+    }
+}
