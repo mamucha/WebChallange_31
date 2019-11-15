@@ -20,7 +20,7 @@ $(document).scroll(function () {
         let wrapperFromTop = wrapper.eq(j).offset().top;
         let wrapperHeight = wrapper.eq(j).outerHeight();
 
-        if (scrollValue > wrapperFromTop + wrapperHeight / 3 - windowHeight) {
+        if (scrollValue > wrapperFromTop + wrapperHeight / 4 - windowHeight) {
             wrapper.eq(j).addClass('l-wrapper--showing');
 
         }
@@ -28,6 +28,8 @@ $(document).scroll(function () {
         if (j === 6) {
             wrapper.eq(wrapper.length - 1).addClass('l-wrapper--showing');
         }
+
+
 
     }
 });

@@ -10,6 +10,7 @@
 @media only screen and (min-width: 768px) {
     @include c-intro\@screen_medium;
     @include c-form\@screen_medium;
+    @include c-menu\@screen_medium;
 
 }
 

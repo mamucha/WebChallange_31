@@ -12,10 +12,12 @@
         margin: 0 auto;
         @include flex(flex, center, space-between);
 
+        padding: 0 30px;
+
     }
 
     &__sticky {
         background-color: #fff;
-        opacity: .9;
+        // opacity: .9;
     }
 }
