@@ -13,7 +13,7 @@ function skill() {
     $('.Count').each(function () {
 
         var $this = $(this);
-        console.log($this);
+
 
         $({
             Counter: 0
