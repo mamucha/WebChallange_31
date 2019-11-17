@@ -2,9 +2,6 @@
 
     display: grid;
     grid-gap: 30px;
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: repeat(2 370px);
-    //mobile
     grid-template-columns: 1fr;
     grid-auto-rows: 270px;
 
@@ -26,6 +23,7 @@
             opacity: 0;
             transition: .4s all ease-in;
             z-index: 99;
+
 
             & div {
                 margin: 5px;
@@ -51,7 +49,6 @@
             opacity: 1;
             animation: linkFade .5s ease forwards;
 
-
         }
 
 
@@ -65,16 +62,22 @@
         }
 
         &:hover:after {
-            background-color: rgba(0, 0, 0, .8);
+            background-color: rgba(0, 0, 0, .6);
+        }
+
+        &:before {
+            @include position($top:15%, $left:0, $right:50%, $bottom:15%);
+            border: 7px solid white;
+            border-left: none;
+            opacity: 0;
+            transition: .4s all ease-in;
         }
 
 
+        &:hover::before {
+            opacity: 1;
+        }
     }
-
-
-
-
-
 
     margin-bottom: 40px;
 

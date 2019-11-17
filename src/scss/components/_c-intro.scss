@@ -3,13 +3,24 @@
     //mobile
     flex-direction: column;
     @include size(100%, 800px);
+    position: relative;
+
+
+    &:after {
+        @include position($left:2%, $top:2%, $right:2%, $bottom:52%);
+        border: 13px solid #212121;
+        opacity: 0.1;
+        z-index: -2;
+
+    }
+
+
 
     &__img {
         background-color: #e1e1e1;
-        // width: 50%;
-        //mobile
         width: 100%;
         height: 50%;
+
 
 
         &>img {
@@ -18,6 +29,13 @@
             left: 50%;
             transform: translateX(-50%);
             @include size(340px, 517px);
+            z-index: 2;
+
+        }
+
+        &:after {
+            @include position($top:52%, $right:2%, $left:2%, $bottom:2%);
+            border: 13px solid #ffffff;
 
         }
     }
@@ -78,6 +96,15 @@
     .c-intro {
         flex-direction: row;
 
+        &:after {
+            @include position($left:0, $top:30%, $right:70%, $bottom:10%);
+            border: 17px solid #212121;
+            border-left: none !important;
+            opacity: 0.1;
+            z-index: -2;
+
+        }
+
         &__img {
             width: 50%;
             height: 100%;
@@ -87,6 +114,15 @@
                 left: -20px;
                 @include size(auto);
                 transform: none;
+                z-index: 2;
+            }
+
+            &:after {
+                @include position($top:40%, $right:0, $left:80%, $bottom:15%);
+                border: 13px solid #ffffff;
+                border-right: none;
+
+
             }
         }
 
@@ -103,11 +139,11 @@
 @mixin c-intro\@screen_wide {
     .c-intro {
 
-
         &__img {
 
             &>img {
-                left: 0
+                left: 0;
+
             }
         }
 
