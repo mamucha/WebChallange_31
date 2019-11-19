@@ -16,7 +16,7 @@
 
 
         color: $txtColor;
-        font-family: Cormorant;
+        font-family: $Cormorant;
         font-size: rem(16px);
         font-weight: 400;
         line-height: 32px;
@@ -30,21 +30,14 @@
 
     &__item {
         position: relative;
-
-        //mobile
         width: 100%;
         text-align: center;
-        // opacity: 0;
-
 
 
         &:nth-child(1)::before {
-            content: '';
-            position: absolute;
+
+            @include position($left:0, $right:0, $bottom:0);
             height: 2px;
-            bottom: 0;
-            left: 0;
-            right: 0;
             background-color: $txtColor;
             transform-origin: bottom left;
             transform: scaleX(1);
@@ -57,11 +50,7 @@
         }
 
         &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            @include position($left:0, $right:0, $bottom:0);
             height: 2px;
             background-color: $txtColor;
             transform-origin: bottom right;
@@ -92,8 +81,6 @@
 
     &__link {
         display: inline-block;
-
-        //monile
         padding: 20px;
         width: 100%;
 
@@ -104,7 +91,6 @@
     }
 
 
-    //burger
     &__burger {
 
         display: block;
@@ -137,22 +123,10 @@
             }
         }
 
-
     }
 }
 
 
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(150px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
 
 
 //media queries

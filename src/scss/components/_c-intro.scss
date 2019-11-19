@@ -1,7 +1,5 @@
 .c-intro {
-    @include flex(flex, center, flex-end);
-    //mobile
-    flex-direction: column;
+    @include flex(flex, center, flex-end, column);
     @include size(100%, 800px);
     position: relative;
 
@@ -13,7 +11,6 @@
         z-index: -2;
 
     }
-
 
 
     &__img {
@@ -66,9 +63,7 @@
     }
 
     &__btn {
-
-        width: 140px;
-        height: 50px;
+        @include size(140px, 50px);
         padding: 0 !important;
 
         &:nth-of-type(1) {
@@ -106,8 +101,8 @@
         }
 
         &__img {
-            width: 50%;
-            height: 100%;
+            @include size(50%, 100%);
+
 
             &>img {
                 bottom: -60px;
@@ -121,8 +116,6 @@
                 @include position($top:40%, $right:0, $left:80%, $bottom:15%);
                 border: 13px solid #ffffff;
                 border-right: none;
-
-
             }
         }
 
@@ -143,7 +136,6 @@
 
             &>img {
                 left: 0;
-
             }
         }
 

@@ -1,9 +1,7 @@
 .c-counter {
 
-    @include flex(flex, center, space-around);
+    @include flex(flex, center, space-around, column);
     width: 100%;
-    //mobile
-    flex-direction: column;
 
     &__box {
 
@@ -12,7 +10,6 @@
         @include flex(flex, center, flex-start, column);
         color: #ffffff;
 
-        //mobile
         &:nth-last-child(1) {
             margin-bottom: 25px;
         }
@@ -44,7 +41,6 @@
 
         &__box {
 
-            //mobile
             &:nth-last-child(1) {
                 margin-bottom: 0px;
             }

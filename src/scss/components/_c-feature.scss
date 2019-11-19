@@ -1,33 +1,23 @@
 .c-feature {
-
-    //mobile
     max-width: 1170px;
     width: 100%;
     padding: 20px 0;
     height: auto;
-
-
-
     position: relative;
-
-    //mobile
     top: 60px;
     box-shadow: 0 0 40px 9px rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     @include flex(flex, center, center, column);
 
     &__boxes {
-        @include flex(flex, center, space-around);
+        @include flex(flex, center, space-around, column);
         width: 100%;
-        //mobile
-        flex-direction: column;
+
     }
 
 
     &__box {
-
         @include flex(flex, center, flex-start, column);
-        //mobile
         margin-bottom: 25px;
         max-width: 290px;
         width: 90%;
@@ -36,7 +26,6 @@
     &__icon {
 
         @include size(45px);
-
 
 
         &>img {
@@ -74,7 +63,6 @@
 
 @mixin c-feature\@screen_large {
 
-
     .c-feature {
 
         &__boxes {
@@ -84,18 +72,13 @@
         }
 
         &__box {
-            // @include size(290px, 100%);
             min-height: 195px;
             height: 100%;
             margin-bottom: 0;
             padding: 0 5px;
 
-
-
         }
-
     }
-
 }
 
 
